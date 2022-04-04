@@ -1,0 +1,125 @@
+* {
+  font-family: "Poppins", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  counter-reset: section;
+}
+
+header {
+  background-color: #ffffff;
+}
+
+h2 {
+  text-align: center;
+}
+
+h2::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
+
+.cv-heading {
+  text-align: center;
+  text-decoration: underline;
+  padding: 40px;
+}
+
+.top-nav {
+  padding: 40px 40px;
+  margin: 0;
+  box-shadow: 2px 2px 10px lightgrey;
+  z-index: 1;
+  background-image: linear-gradient(to right, #5400f0, #b700ff);
+}
+
+.bottom-nav {
+  padding: 40px 40px;
+  margin: 0;
+  box-shadow: 2px 2px 10px lightgrey;
+  z-index: -10;
+  background-image: linear-gradient(to right, #eb8511, #f73e4d);
+}
+
+.bottom-nav ul {
+  display: flex;
+  align-items: top;
+}
+
+.bottom-nav li {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  list-style-type: none;
+  border: 2px solid black;
+  background-color: #f2f2f2;
+}
+
+.bottom-nav li:hover {
+  background-color: #696262;
+  color: white;
+}
+
+.top-nav ul {
+  display: flex;
+  align-items: top;
+}
+
+.top-nav li {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  list-style-type: none;
+  border: 2px solid black;
+  background-color: #f2f2f2;
+}
+
+.top-nav li:hover {
+  background-color: #696262;
+  color: white;
+}
+
+.cv {
+  background-color: #ffffff;
+  box-shadow: 2px 2px 10px lightgrey;
+  width: 75%;
+  max-width: 800px;
+  min-height: 75vh;
+  padding: 40px;
+
+  margin: -40px auto 0;
+  z-index: 10;
+  position: sticky;
+}
+
+.cv form div {
+  padding: 20px;
+}
+
+.cv form button {
+  margin: 10px;
+}
+
+@media only screen and (min-width: 720px) {
+  .rest-of-cv {
+    column-count: 2;
+  }
+  h2 {
+    text-align: left;
+  }
+}
+
+.english-flag {
+  width: 200px;
+  max-width: 20%;
+  display: flex;
+}
+
+.english-flag:hover {
+  filter: grayscale(80%);
+}
